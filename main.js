@@ -10,10 +10,11 @@ app.get('/', (req, res) => {
 })
 // Route '/animal/:name'
 // GET request.
-app.get('/animal/:name', (req, res) => {
+app.get('/animal/:name/:color', (req, res) => {
     let animal = req.params.name
-    console.log(animal)
-    res.send("Hello " + animal)
+    let color = req.params.color
+    console.log(animal, " ", color)
+    res.send("Hello " + animal + color)
 })
 
 
