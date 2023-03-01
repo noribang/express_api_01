@@ -1,16 +1,12 @@
-// Import expess module.
+// Require express module.
 const express = require('express')
-// Created express instance.
+// Create instance of express application.
 const app = express()
-
-// Create route '/'. 
-// Create GET request and respond with simple string message to browser.
+// Route '/'.
+// GET request.
 app.get('/', (req, res) => {
-    res.send("Hello world.")
+    res.send('Hello world')
 })
 
-// Listen localhost 4000
+// Server listen.
 app.listen(4000)
-
-
-
