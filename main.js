@@ -3,6 +3,10 @@ const express = require('express')
 // Create instance of express application.
 const app = express()
 
+// Middleware
+// Receive and parse incoming json.
+app.use(express.json())
+
 // Route '/'.
 // GET request.
 app.get('/', (req, res) => {
