@@ -36,26 +36,22 @@ e.g.
 npx nodemon main.js
 ```
 
-
 ## Usage
 In main.js file:
 ```javascript
 
+// Import expess module.
 const express = require('express')
+// Created express instance.
 const app = express()
 
-// Create route '/'.
-// Create GET request response for route '/'.
+// Create route '/'. 
+// Create GET request and respond with simple string message to browser.
 app.get('/', (req, res) => {
-    res.send("Welcome to the home page.")
+    res.send("Hello world.")
 })
 
-// Create route '/'
-// Create GET request response
-app.get('/about', (req, res) => {
-    res.send("Thanks for learning more about us.")
-})
-
-app.listen(3000)
+// Listen localhost 4000
+app.listen(4000)
 
 ```

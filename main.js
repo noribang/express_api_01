@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.send("Hello world.")
 })
 
-// LIsten localhost 4000
+// Listen localhost 4000
 app.listen(4000)
 
 
