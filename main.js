@@ -43,7 +43,7 @@ app.post('/api/secret', (req, res) => {
     if (req.body.username === 'johndoe' && req.body.password === "qwerty") {
         res.json("You have secret access...")
     } else {
-        res.json("That is correct.")
+        res.json("That is incorrect.")
     }
 })
 

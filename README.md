@@ -36,6 +36,12 @@ e.g.
 npx nodemon main.js
 ```
 
+## CORS package
+Install.
+```bash
+npm install cors
+```
+
 ## Usage
 In main.js file:
 ```javascript
