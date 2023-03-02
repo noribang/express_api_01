@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 //     res.send("Hello " + animal + color)
 // })
 
+// Route with parameters.
 app.get("/api/animal/:name", (req, res) => {
     if (req.params.name === "meowsalot") {
       res.json({ name: "Meowsalot", species: "cat", "photo": "https://learnwebcode.github.io/json-example/images/cat-1.jpg", bio: "This cat is great and very vocal. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis asperiores, sunt consectetur a amet dolorem rem animi tempore molestias nesciunt fuga, sequi alias voluptatum totam reprehenderit assumenda deleniti distinctio? Cumque." })
@@ -32,6 +33,11 @@ app.get("/api/animal/:name", (req, res) => {
       res.json("Animal not found.")
     }
   })
+// Route with query string.
+app.get('/fake-search', (req, res) => {
+    console.log(req.query)
+    res.json("thank you for your request.")
+})
 
 
 // Server listen.
