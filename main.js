@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 
 // Middleware
-// Receive and parse incoming json.
+// Receive post request and parse incoming json.
 app.use(express.json())
 
 // Route '/'.
@@ -37,6 +37,14 @@ app.get("/api/animal/:name", (req, res) => {
 app.get('/fake-search', (req, res) => {
     console.log(req.query)
     res.json("thank you for your request.")
+})
+// Post request
+app.post('/api/secret', (req, res) => {
+    if (req.body.username === 'johndoe' && req.body.password === "qwerty") {
+        res.json("You have secret access...")
+    } else {
+        res.json("That is correct.")
+    }
 })
 
 
